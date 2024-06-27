@@ -59,27 +59,27 @@ export default function TodoList() {
   // };
 
   // mark task as done..
-  // let MarkAsDone = (id) => {
-  //   setTodo((prevTodos) =>
-  //     prevTodos.map((todo) => {
-  //       if (todo.id === id) {
-  //         return {
-  //           ...todo,
-  //           isDone: true,
-  //         };
-  //       } else {
-  //         return todo;
-  //       }
-  //     })
-  //   );
-  // };
+  let MarkAsDone = (id) => {
+    setTodo((prevTodos) =>
+      prevTodos.map((todo) => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            isDone: true,
+          };
+        } else {
+          return todo;
+        }
+      })
+    );
+  };
   // Mark all atsk as done..
   let MarkAllDone = () => {
     setTodo((prevTodos) =>
       prevTodos.map((todo) => {
         return {
           ...todo,
-          task: todo.task.toUpperCase(),
+          isDone: true,
         };
       })
     );
@@ -123,7 +123,8 @@ export default function TodoList() {
         ))}
       </ul>
       <br></br>
-      <button onClick={upperCaseAll}>Upper Case All</button>
+      {/* <button onClick={upperCaseAll}>Upper Case All</button> */}
+      <button onClick={MarkAllDone}>Mark all task done</button>
     </div>
   );
 }
