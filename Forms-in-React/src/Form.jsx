@@ -15,6 +15,14 @@ export default function Form() {
       return { ...currData };
     });
   };
+  // controll input element , make empty all inputs after form submission and add react state.
+  let handleSubmit = (event) => {
+    event.preventDefault();
+    setFormData({
+      fullName: "",
+      userName: "",
+    });
+  };
 
   return (
     <form>
