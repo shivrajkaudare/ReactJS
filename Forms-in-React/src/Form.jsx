@@ -7,14 +7,18 @@ export default function Form() {
     password: "",
   });
   let handleLnputChange = (event) => {
-    let fieldName = event.target.name;
-    let newValue = event.target.value;
+    // let fieldName = event.target.name;
+    // let newValue = event.target.value;
 
+    // setFormData((currData) => {
+    //   // currData[fieldName] = newValue;
+    //   // return { ...currData };
+    //   //Or
+    //   return { ...currData, [fieldName]: newValue };
+    // });
+    /* or */
     setFormData((currData) => {
-      // currData[fieldName] = newValue;
-      // return { ...currData };
-      //Or
-      return { ...currData, [fieldName]: newValue };
+      return { ...currData, [event.target.name]: event.target.value };
     });
   };
   // controll input element , make empty all inputs after form submission and add react state.
