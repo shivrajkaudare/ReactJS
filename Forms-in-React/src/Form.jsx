@@ -21,6 +21,7 @@ export default function Form() {
       return { ...currData, [event.target.name]: event.target.value };
     });
   };
+
   // controll input element , make empty all inputs after form submission and add react state.
   let handleSubmit = (event) => {
     event.preventDefault();
@@ -31,30 +32,34 @@ export default function Form() {
   };
 
   return (
-    <form>
-      <label htmlFor="fullname">Full Name : </label>
-      <input
-        type="text"
-        id="fullname"
-        placeholder="Enter Full Name"
-        value={FormData.fullName}
-        name="fullName"
-        onChange={handleLnputChange}
-      ></input>
-      <br /> <br />
+    <>
+      <h2> Basic Form In React</h2>
       <br />
-      <label htmlFor="username">User Name : </label>
-      <input
-        type="text"
-        id="username"
-        placeholder="Enter User Name"
-        value={FormData.userName}
-        name="userName"
-        onChange={handleLnputChange}
-      ></input>
-      <br />
-      <br />
-      <button>Submit</button>
-    </form>
+      <form>
+        <label htmlFor="fullname">Full Name : </label>
+        <input
+          type="text"
+          id="fullname"
+          placeholder="Enter Full Name"
+          value={FormData.fullName}
+          name="fullName"
+          onChange={handleLnputChange}
+        ></input>
+        <br /> <br />
+        <br />
+        <label htmlFor="username">User Name : </label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter User Name"
+          value={FormData.userName}
+          name="userName"
+          onChange={handleLnputChange}
+        ></input>
+        <br />
+        <br />
+        <button>Submit</button>
+      </form>
+    </>
   );
 }
