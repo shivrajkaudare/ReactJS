@@ -11,8 +11,10 @@ export default function Form() {
     let newValue = event.target.value;
 
     setFormData((currData) => {
-      currData[fieldName] = newValue;
-      return { ...currData };
+      // currData[fieldName] = newValue;
+      // return { ...currData };
+      //Or
+      return { ...currData, [fieldName]: newValue };
     });
   };
   // controll input element , make empty all inputs after form submission and add react state.
