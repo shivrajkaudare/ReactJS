@@ -1,16 +1,21 @@
 import { useState } from "react";
 
 export default function Form() {
-  let [fullName, useFullName] = useState("Shiv");
-  let [userName, useUsername] = useState("");
+  let [fromData, setFormData] = useState({
+    fullName: "",
+    userName: "",
+    password: "",
+  });
+  let handleLnputChange = (event) => {
+    let fieldName = event.target.name;
+    let newValue = event.target.value;
 
-  let handleNameChange = (event) => {
-    useFullName(event.target.value);
+    setFormData((currData) => {
+      currData[fieldName] = newValue;
+      return { ...currData };
+    });
   };
 
-  let handleUserName = (event) => {
-    useUsername(event.target.value);
-  };
   return (
     <form>
       <label htmlFor="fullname">Full Name : </label>
@@ -18,9 +23,10 @@ export default function Form() {
         type="text"
         id="fullname"
         placeholder="Enter Full Name"
-        value={fullName}
-        onChange={handleNameChange}
-      ></input>{" "}
+        value={FormData.fullName}
+        name="fullName"
+        onChange={handleLnputChange}
+      ></input>
       <br /> <br />
       <br />
       <label htmlFor="username">User Name : </label>
@@ -28,8 +34,9 @@ export default function Form() {
         type="text"
         id="username"
         placeholder="Enter User Name"
-        value={userName}
-        onChange={handleUserName}
+        value={FormData.userName}
+        name="userName"
+        onChange={handleLnputChange}
       ></input>
       <br />
       <br />
