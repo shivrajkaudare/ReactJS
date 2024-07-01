@@ -2,11 +2,12 @@ import Form from "./Form";
 import "./App.css";
 import CommmentForm from "./CommentForm";
 import Comment from "./Comment";
+import SignupForm from "./FormValidation";
 
 function App() {
   return (
     <>
-      <Form />
+      {/* <Form />
       <br />
       <br />
       <br />
@@ -23,7 +24,8 @@ function App() {
       <br />
       <br />
       <br />
-      <Comment />
+      <Comment /> */}
+      <SignupForm />
     </>
   );
 }
