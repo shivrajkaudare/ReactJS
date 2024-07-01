@@ -14,7 +14,7 @@ export default function CommmentForm({ addNewComment }) {
 
   let handleSubmit = (event) => {
     console.log(formData);
-
+    //
     addNewComment(formData);
 
     event.preventDefault();
