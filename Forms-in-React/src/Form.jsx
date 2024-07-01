@@ -6,7 +6,7 @@ export default function Form() {
     userName: "",
     password: "",
   });
-  let handleLnputChange = (event) => {
+  let handleInputChange = (event) => {
     // let fieldName = event.target.name;
     // let newValue = event.target.value;
 
@@ -41,9 +41,9 @@ export default function Form() {
           type="text"
           id="fullname"
           placeholder="Enter Full Name"
-          value={FormData.fullName}
+          value={fromData.fullName}
           name="fullName"
-          onChange={handleLnputChange}
+          onChange={handleInputChange}
         ></input>
         <br /> <br />
         <br />
@@ -52,9 +52,9 @@ export default function Form() {
           type="text"
           id="username"
           placeholder="Enter User Name"
-          value={FormData.userName}
+          value={fromData.userName}
           name="userName"
-          onChange={handleLnputChange}
+          onChange={handleInputChange}
         ></input>
         <br />
         <br />
