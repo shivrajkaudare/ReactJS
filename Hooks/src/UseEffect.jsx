@@ -7,7 +7,7 @@ export default function Counter() {
     setCount((currCount) => currCount + 1);
   };
 
-  // this function execute everytime when component re-renders
+  // this useEffecct function execute everytime when component re-renders
   useEffect(function printSomething() {
     console.log("This is a side-effect");
   });
