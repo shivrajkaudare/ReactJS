@@ -6,7 +6,7 @@ export default function Counter() {
   let incCount = () => {
     setCount((currCount) => currCount + 1);
   };
-
+  // there are three way to use UseEffect()
   // this useEffecct function execute everytime when component re-renders
   useEffect(function printSomething() {
     console.log("This is a side-effect");
