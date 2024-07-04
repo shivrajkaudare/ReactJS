@@ -11,6 +11,8 @@ export default function Counter() {
   useEffect(function printSomething() {
     console.log("This is a side-effect");
   });
+
+  // Using dependencies (dependencies are nothing but state variables).
   return (
     <div>
       <h3>count = {count}</h3>
