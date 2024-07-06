@@ -18,8 +18,9 @@ export default function SearchBox() {
         throw new Error("Network response was not ok");
       }
       const jsonResponse = await response.json();
-      console.log(jsonResponse);
+      //   console.log(jsonResponse);
       let result = {
+        city: city,
         temp: jsonResponse.main.temp,
         tempMin: jsonResponse.main.temp_min,
         tempMax: jsonResponse.main.temp_max,
