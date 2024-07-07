@@ -1,0 +1,10 @@
+.WeatherApp {
+  text-align: center;
+  border: 1px solid black;
+  height: 100%;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 10px 10px lightblue;
+  margin-top: 50px;
+}
