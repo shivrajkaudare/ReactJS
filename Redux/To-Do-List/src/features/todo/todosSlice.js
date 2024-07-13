@@ -23,9 +23,10 @@ export const todoSlice = createSlice({
     deleteDodo: (state, action) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },
+
     marksAsDone: (state, action) => {
       state.todos = state.todos.map((todo) => {
-        if (todo.id === action.payload) {
+        if (todo.id == action.payload) {
           todo.isDone = true;
         }
       });
