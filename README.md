@@ -1,4 +1,4 @@
- <h2>React JS</h2> 
+ <h2>React JS(Vite)</h2> 
 - State <br>
 - Hooks <br>
 - Component Decomposition <br>
