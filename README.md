@@ -1,6 +1,6 @@
  <h2>React JS(Vite)</h2> 
-- State <br>
-- Hooks <br>
+- React State <br>
+- React Hooks <br>
 - Component Decomposition <br>
 - React Forms <br>
 - React Cards <br>
